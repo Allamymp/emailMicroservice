@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    username: admin
+    password: adminPassword
+    url: jdbc:postgresql://ms-user-db:5432/ms-user-db
+  jpa:
+    hibernate:
+      ddl-auto: update

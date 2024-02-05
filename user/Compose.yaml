@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ms-user-db:
+    image: postgres
+    environment:
+      POSTGRES_DB: ms-user-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminPassword
+    ports:
+      - "5432:5432"
+
+  ms-user-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - ms-user-db
+    ports:
+      - "8081:8081"
