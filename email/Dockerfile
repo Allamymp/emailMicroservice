@@ -10,6 +10,6 @@ RUN mvn clean install -DskipTests
 
 # Second step: Creating the minimal image
 FROM openjdk:21-jdk-slim
-EXPOSE 8081
-COPY --from=build /target/user-0.0.1-SNAPSHOT.jar ms-api-user.jar
+EXPOSE 8082
+COPY --from=build /target/email-0.0.1-SNAPSHOT.jar ms-api-user.jar
 CMD ["sh", "-c", "java -jar ms-api-user.jar"]

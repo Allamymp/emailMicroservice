@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ms-email-db:
+    image: postgres
+    environment:
+      POSTGRES_DB: ms-email-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminPassword
+    ports:
+      - "5432:5432"
+
+  ms-email-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - ms-email-db
+    ports:
+      - "8082:8082"
