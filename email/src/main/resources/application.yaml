@@ -2,9 +2,9 @@ server:
   port: 8082
 spring:
   datasource:
-    username: admin
+    username: adminEmail
     password: adminPassword
-    url: jdbc:postgresql://ms-email-db:5432/ms-email-db
+    url: jdbc:postgresql://localhost:5432/ms-db-email
   jpa:
     hibernate:
       ddl-auto: update

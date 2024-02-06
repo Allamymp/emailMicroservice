@@ -24,7 +24,7 @@ public class UserProducer {
         emailDto.setUserId(userModel.getUserId());
         emailDto.setEmailTo(userModel.getEmail());
         emailDto.setSubject("Api test email!");
-        emailDto.setText(userModel.getEmail()+", welcome! Email successfully registered in an api made by Allamy Monteiro");
+        emailDto.setText(userModel.getEmail()+", welcome! Email successfully registered in an api made by Allamy Monteiro.");
 
         rabbitTemplate.convertAndSend("",routingKey,emailDto);
     }
