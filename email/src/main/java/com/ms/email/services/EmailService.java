@@ -1,10 +1,9 @@
-/*package com.ms.email.services;
+package com.ms.email.services;
 
 import com.ms.email.enums.StatusEmail;
 import com.ms.email.models.EmailModel;
 import com.ms.email.repository.EmailRepository;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -18,9 +17,6 @@ public class EmailService {
 
     private final EmailRepository repository;
     private final JavaMailSender emailSender;
-
-
-
     @Value(value = "${spring.mail.username}")
     private String emailFrom;
 
@@ -47,9 +43,5 @@ public class EmailService {
             emailModel.setStatusEmail(StatusEmail.ERROR);
         }
         return repository.save(emailModel);
-
     }
-
-
 }
-*/
